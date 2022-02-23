@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config webpack.config.js --mode development",
-    "pro": "webpack --config webpack.config.js"
+    "pro": "webpack --config webpack.config.js",
+    "exe": "npx webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/Flerian-EC/pokemon#readme",
   "devDependencies": {
     "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
@@ -29,6 +31,7 @@
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "webpack": "^5.69.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   }
 }
