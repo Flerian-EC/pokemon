@@ -16,7 +16,7 @@ const filtro = (list) => {
 }
 
 const peticion = async(num) => {
-  const response = await fetch(API + num.toString());
+  const response = await fetch(API + num);
   const data = await response.json();
 
   const dataSpecies = await peticionPeticiones(data.species.url);
@@ -29,8 +29,11 @@ const peticion = async(num) => {
     element = filtro(element.names)[0];
     specie.push(element.name)
   }
-  const textos = filtro(dataSpecies.flavor_text_entries).map(ele => {
+  let textos = filtro(dataSpecies.flavor_text_entries).map(ele => {
     return ele.flavor_text;
+  });
+  textos = textos.filter((item,index)=>{
+    return textos.indexOf(item) === index;
   })
 
   const typeComponents = data.types.map(element => {

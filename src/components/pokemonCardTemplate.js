@@ -1,10 +1,4 @@
-const CARD_POKEMON = ({name, img, specie, textList, type}) => {
-
-  //funcion para eliminar los /n de los textList
-  const text = textList.map(element => {
-    element = element
-    return "<p></p>"
-  });
+export const CARD_POKEMON = ({name, img, specie, text, type}) => {
 
   const template =`
   <h3>${name}</h3>
@@ -12,9 +6,12 @@ const CARD_POKEMON = ({name, img, specie, textList, type}) => {
   <div class="principal-container">
     <p class="carac">caracteristicas</p>
     <div class="carac-container">
-      <p>${type}</p>
-      <p>${specie}</p>
+      <p>tipo: ${type.join(" ")}</p>
+      <p>especie: ${specie.join(" ")}</p>
     </div>
+    <p id="description-text">${text}</p>
   </div>
   `;
+
+  return template;
 }
