@@ -11,7 +11,6 @@ class pokemonCard extends HTMLElement {
 
   async render() {
     const obj = await peticion(this.pokemonNumber);
-    console.log(obj.text)
     let template = document.createElement("template");
     template.innerHTML = CARD_POKEMON({
       name: obj.name,

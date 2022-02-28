@@ -1,0 +1,11 @@
+@import "./global.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
+}
+pokemon-card {
+  height: 100%;
+}
