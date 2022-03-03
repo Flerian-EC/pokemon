@@ -1,3 +1,5 @@
+//Esta funcion obtiene como argumento el tipo del pokemon y en base al tipo retorna un objeto con estilos para ese tipo de pokemon
+
 const typeColor = (typ) => {
   typ = typ[0]
   let gradient;
@@ -66,7 +68,7 @@ const typeColor = (typ) => {
 }
 
 
-
+//Este es el template del componente 'pokemon-card'
 export const CARD_POKEMON = ({name, img, specie, text, type}) => {
   const objColor = typeColor(type)
   const style = `
@@ -139,6 +141,7 @@ export const CARD_POKEMON = ({name, img, specie, text, type}) => {
     padding: 10px;
     text-decoration: underline;
     cursor: pointer;
+    font-family: Fredoka;
   }
 </style>
   `

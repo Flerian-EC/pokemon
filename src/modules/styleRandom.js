@@ -1,3 +1,5 @@
+//Esta funcion devuelve un numero random entre '[1,3]'
+
 const random = () => {
   let value;
   let number = Math.random();

@@ -1,6 +1,7 @@
 import peticion from "../modules/peticion";
 import { CARD_POKEMON } from "./pokemonCardTemplate";
 
+//Esta clase es el componente 'pokemon-card', usa la funcion 'peticion' para obtener un objeto de una API pokemon. Tambien utiliza la funcion CARD_POKEMON que retorna el template HTML del componente
 class pokemonCard extends HTMLElement {
   constructor() {
     super();

@@ -1,5 +1,6 @@
 const API = "https://pokeapi.co/api/v2/pokemon/";
 
+//Esta funcion hace una peticion al API pokemon, por argumento se pasa un numero que es el id del pokemon, una vez hecha la peticion retorna un objeto con la informacion del pokemon
 const peticionPeticiones = async(api) => {
   const response = await fetch(api);
   const data = await response.json();

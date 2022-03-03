@@ -11,13 +11,24 @@ html {
   font-size: 62.5%;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 10px;
+@font-face {
+  font-family: "Fredoka";
+  src: url(69bc30c65af4f5fb392f.woff2) format("woff2"), url(8bdc39147fecf656a188.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
-
-pokemon-card {
-  height: 100%;
+@font-face {
+  font-family: "Fredoka";
+  src: url(71dfcca5f3f2e1432d2b.woff2) format("woff2"), url(9f7d59462730384e4c37.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fredoka";
+  src: url(304227597e318732eafc.woff2) format("woff2"), url(7f859291223771b1b089.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
