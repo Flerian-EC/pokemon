@@ -9,7 +9,7 @@ module.exports = {
   mode: "production",
   entry: ["./src/style/style.js","./src/main.js", "./src/components/pokemonCardComponent.js"],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "script.js",
     environment: {
       arrowFunction: false
