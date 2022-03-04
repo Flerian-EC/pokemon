@@ -92,7 +92,7 @@ export const CARD_POKEMON = ({name, img, specie, text, type}) => {
   }
   h3 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
     font-size: 2.5rem;
     color: #034159;
     text-transform: uppercase;
@@ -116,8 +116,19 @@ export const CARD_POKEMON = ({name, img, specie, text, type}) => {
   }
   .principal-container P {
     color: #034159;
+    font-size: 1.9rem;
+    font-family: Fredoka, Arial, sans-serif;
+    font-weight: normal;
+  }
+  .principal-container .carac {
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
     font-size: 1.8rem;
-    font-family: arial;
+    font-weight: normal;
+  }
+  .principal-container .descrip {
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
   }
   .carac {
     font-weight: bold;
@@ -129,6 +140,7 @@ export const CARD_POKEMON = ({name, img, specie, text, type}) => {
     width: 100%;
     height: fit-content;
     margin-bottom: 10px;
+    padding-left: 10px;
   }
   .descrip {
     font-weight: bold;
@@ -142,6 +154,7 @@ export const CARD_POKEMON = ({name, img, specie, text, type}) => {
     text-decoration: underline;
     cursor: pointer;
     font-family: Fredoka;
+    font-weight: 500;
   }
 </style>
   `

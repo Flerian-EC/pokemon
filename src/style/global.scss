@@ -6,11 +6,11 @@
 html {
   font-size: 62.5%;
 }
-// Fuente interesante
+// Fuente texto
 @font-face {
   font-family: 'Fredoka';
-  src: url('./assets/font/interesante/Fredoka-Bold.woff2') format('woff2'),
-      url('./assets/font/interesante/Fredoka-Bold.woff') format('woff');
+  src: url('../../font/text/Fredoka-Bold.woff2') format('woff2'),
+      url('../../font/text/Fredoka-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@ html {
 
 @font-face {
   font-family: 'Fredoka';
-  src: url('./assets/font/interesante/Fredoka-Regular.woff2') format('woff2'),
-      url('./assets/font/interesante/Fredoka-Regular.woff') format('woff');
+  src: url('../../font/text/Fredoka-Regular.woff2') format('woff2'),
+      url('../../font/text/Fredoka-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,10 +27,29 @@ html {
 
 @font-face {
   font-family: 'Fredoka';
-  src: url('./assets/font/interesante/Fredoka-Medium.woff2') format('woff2'),
-      url('./assets/font/interesante/Fredoka-Medium.woff') format('woff');
+  src: url('../../font/text/Fredoka-Medium.woff2') format('woff2'),
+      url('../../font/text/Fredoka-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+//Fuente titulo
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  src: url('../../font/title/BeVietnamPro-Bold.woff2') format('woff2'),
+      url('../../font/title/BeVietnamPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  src: url('../../font/title/BeVietnamPro-Medium.woff2') format('woff2'),
+      url('../../font/title/BeVietnamPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 //variables de fuente
+$texto: 'Be Vietnam Pro', Arial, sans-serif;

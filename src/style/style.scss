@@ -1,1 +1,71 @@
-@import "./global.scss";
+//Este es el header
+.home-header {
+  width: 100%;
+  height: 170px;
+  //Este es el contenedor del header
+  &-container {
+    width: 90%;
+    height: 75px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    //icono del header
+    img {
+      width: 50px;
+      filter: drop-shadow(-1px 1px 2px #000000);
+    }
+    //Este es el nav
+    &-nav {
+      //Contenedor del inpupt
+      &__input {
+        width: 200px;
+        height: fit-content;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        input, button {
+          display: block;
+          outline: none;
+          background-color: unset;
+        }
+        input {
+          width: 100%;
+          height: 35px;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          box-shadow: inset -4px 4px 25px -15px #000;
+          border-radius: 10px;
+          font-size: 17px;
+          border: unset;
+        }
+        button {
+          width: 80px;
+          height: 25px;
+          margin: 0 auto;
+          border: 1px solid black;
+          border-radius: 6px;
+          box-shadow: -2px 2px 8px -2px rgb(0 0 0 / 60%);
+          font-size: 17px;
+        }
+      }
+      //Contenedor de los botones del header
+      &__botton {
+        width: 200px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        li {
+          padding: 3px 4px;
+          border: 1px solid black;
+          border-radius: 6px;
+          font-family: $texto;
+          font-size: 21px;
+          box-shadow: -2px 2px 8px -2px rgb(0 0 0 / 60%);
+        }
+      }
+    }
+  }
+}
