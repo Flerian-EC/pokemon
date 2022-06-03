@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.config.js --mode development",
-    "pro": "webpack --config webpack.config.js",
+    "dev": "webpack --config webpack.config.js",
+    "pro": "webpack --config webpack.config.js  --mode production",
     "exe": "npx webpack serve --open"
   },
   "repository": {

@@ -36,7 +36,7 @@
           height: 35px;
           margin-bottom: 10px;
           padding-left: 10px;
-          box-shadow: inset -4px 4px 25px -15px #000;
+          box-shadow: inset -3px 5px 32px -15px rgb(0 0 0 / 50%);
           border-radius: 10px;
           font-size: 17px;
           border: unset;
@@ -56,16 +56,64 @@
         width: 200px;
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         li {
-          padding: 3px 4px;
+          padding: 4px 6px;
           border: 1px solid black;
           border-radius: 6px;
           font-family: $texto;
-          font-size: 21px;
-          box-shadow: -2px 2px 8px -2px rgb(0 0 0 / 60%);
+          font-size: 18px;
+          box-shadow: -2px 2px 4px -2px rgb(0 0 0 / 40%);
         }
       }
     }
   }
+}
+
+.home-main {
+  width: 100%;
+  height: fit-content;
+  padding: 50px 0;
+  font-family: $texto;
+  h1 {
+    font-family: $titulos;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+}
+
+.home-pokemon-list {
+  width: 90%;
+  margin: 0 auto;
+  height: fit-content;
+  
+  &__container {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    row-gap: 10px;
+    pokemon-card {
+      margin: 0 auto;
+    }
+  }
+
+  &__button {
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-family: "Be Vietnam Pro", Arial, sans-serif;
+    font-size: 15px;
+    box-shadow: -2px 2px 4px -2px rgb(0 0 0 / 40%);
+    outline: none;
+  }
+
 }

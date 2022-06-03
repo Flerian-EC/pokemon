@@ -156,6 +156,12 @@ export const CARD_POKEMON = ({name, img, specie, text, type}) => {
     font-family: Fredoka;
     font-weight: 500;
   }
+
+  @media (min-width: 768px) {
+    #description-text:hover {
+      color: white;
+    }
+  }
 </style>
   `
   const template =`
