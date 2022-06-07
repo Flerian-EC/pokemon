@@ -7,7 +7,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   watch: true,
   mode: "development",
-  entry: ["./src/style/style.js","./src/main.js", "./src/components/pokemonCardComponent.js"],
+  entry: ["./src/style/style.js", "./src/components/pokemonCardComponent.js", "./src/components/flerian-slideButton.js", "./src/main.js"],
   output: {
     path: path.resolve(__dirname, "docs"),
     filename: "script.js",
