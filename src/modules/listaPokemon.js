@@ -6,7 +6,7 @@ const peticion = async(API) => {
 
 const renderListPokemon = async() => {
   const $conteiner = document.querySelector(
-    ".home-pokemon-list"
+    ".home-pokemon-list__pokemons"
   );
 
   const templateHtml = `

@@ -4,18 +4,46 @@ class FlerianSlideButton extends HTMLElement {
     this.attachShadow({mode: "open"});
 
     this.attr = {
-      color: this.getAttribute("flerian-color-button"),
-      size: this.getAttribute("flerian-size-button"),
+      color: this.getAttribute("flerian-color"),
+      size: this.getAttribute("flerian-size"),
+      img: this.getAttribute("flerian-img"),
+      media: this.getAttribute("flerian-limit"),
+      right: this.getAttribute("flerian-right-position"),
+      bottom: this.getAttribute("flerian-bottom-position"),
     }
 
+  }
+
+  mediaQueryCondition(control, size, position) {
+    if(control !== false) {
+      let limit = parseFloat(control);
+      return (`
+      @media (min-width: ${control}) {
+        :host {
+          right: unset;
+          left: calc(50% + ${limit / 2}px - (${size} + ${position}));
+        }
+      }
+      `)
+    }else {
+      return "";
+    }
+  }
+
+  templateCondition(control) {
+    if(control === null) {
+      return "<span></span>";
+    }else {
+      return `<img src="${control}" alt="arrow"/>`
+    }
   }
 
   styles() {
     let color = this.attr.color;
     if(color === null) {
       color = ["#FF0075", "#12CAD6"];
-    }else if(color.split(" ").length !== 2) {
-      color = ["#FF0075", "#12CAD6"];
+    }else if(color.split(" ").length < 2) {
+      color = ["#FF0075", color];
     }else {
       color = color.split(" ");
     }
@@ -29,6 +57,13 @@ class FlerianSlideButton extends HTMLElement {
       size = size.split(" ");
     }let sizeNumber = [parseFloat(size[0]), parseFloat(size[1])]
 
+    let limit = this.attr.media;
+    if(limit === null) {
+      limit = false;
+    }
+
+    let right = (this.attr.right) ?this.attr.right :"15px";
+    let bottom = (this.attr.bottom) ?this.attr.bottom :"15px";
 
     const css = `
     <style>
@@ -39,8 +74,8 @@ class FlerianSlideButton extends HTMLElement {
         background-color: ${color[1]};
         display: block;
         position: fixed;
-        bottom: 15px;
-        right: 15px;
+        bottom: ${bottom};
+        right: ${right};
         box-shadow: -2px 2px 5px -1px rgb(0 0 0 / 50%);
         z-index: 1000;
 
@@ -66,6 +101,11 @@ class FlerianSlideButton extends HTMLElement {
         border-left: ${sizeNumber[0] * (30/100)}px solid transparent;
         border-right: ${sizeNumber[0] * (30/100)}px solid transparent;
       }
+      img {
+        width: 60%;
+      }
+      
+      ${this.mediaQueryCondition(limit, size[0], right)}
       </style>
     `;
 
@@ -76,7 +116,7 @@ class FlerianSlideButton extends HTMLElement {
     const html = `
       ${this.styles()}
       <div class="container">
-        <span></span>
+        ${this.templateCondition(this.attr.img)}
       </div>
     `;
 
@@ -126,6 +166,10 @@ window.customElements.define("flerian-slide-button", FlerianSlideButton);
 
 /////////////////////////////////////
 /* 
---flerian-color-button="CssColor CssColor"; Este atributo define el color que tendra la flecha y el boton (el primer valor define la flecha, el segundo el boton)
---flerian-size-button="CssSize CssSize"; Este atributo define la medida en ancho y alto del boton (el primer valor define el ancho y el segundo el alto)
+--flerian-color="CssColor CssColor"; Este atributo define el color que tendra la flecha y el boton (el primer valor define la flecha, el segundo el boton). Si el atributo de imagen esta activo, solo se le debe pasar un valor a 'flerian-color'
+--flerian-size="CssSize CssSize"; Este atributo define la medida en ancho y alto del boton (el primer valor define el ancho y el segundo el alto)
+--flerian-img="ruta" define la ruta de imagen para el boton
+--flerian-limit="px" define el posicionamiento final del boton con respecto al crecimiento del ancho de pantalla
+--flerian-right-position="px" definen la posicion del boton con respecto al viewport
+--flerian-bottom-position="px" definen la posicion del boton con respecto al viewport
 */

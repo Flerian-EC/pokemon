@@ -73,7 +73,7 @@
 .home-main {
   width: 100%;
   height: fit-content;
-  padding: 50px 0;
+  padding: 20px 0;
   font-family: $texto;
   h1 {
     font-family: $titulos;
@@ -116,4 +116,62 @@
     outline: none;
   }
 
+}
+
+.home-pokemon-list__pokemons {
+  width: 100%;
+  height: fit-content;
+}
+
+
+
+.home-pokemon-filter {
+  font-family: $titulos;
+  display: none;
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.1rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+  &-buttons {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    text-align: center;
+    p {
+      width: 100%;
+      padding: 10px 0px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      font-family: $texto;
+      font-weight: 500;
+      color: white;
+      box-shadow: -4px 4px 5px -2px rgb(0 0 0 / 35%);
+      background-color: #12CAD6;
+    }
+  }
+  .button-fil {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: #ed5564;
+    width: 120px;
+    padding: 5px 0px;
+    color: white;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: -4px 4px 5px -2px rgb(0 0 0 / 35%);
+  }
+
+}
+
+
+.button-active {
+  background-color: #FFB830 !important;
 }
