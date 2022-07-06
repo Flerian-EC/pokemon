@@ -1,5 +1,6 @@
 import axios from "axios";
 import contador from "./funContador";
+import renderList from "./renderList";
 
 const $filter = document.querySelector("#filter");
 const $container = document.querySelector(".home-pokemon-list__pokemons");
@@ -45,9 +46,22 @@ const tiposPokemon = async() => {
 
 const renderFilter = async() => {
 
+  let controlFilterMenu = true;
+
   $filter.addEventListener("click", (e) => {
-    $container.innerHTML = "";
-    $filetContainer.style.display = "block";
+
+    if(document.querySelector(
+      ".home-pokemon-list__container"
+    )) {controlFilterMenu = true}
+
+    if(controlFilterMenu) {
+      $container.innerHTML = "";
+      $filetContainer.style.display = "block";
+    }else {
+      window.location.reload();
+    }
+
+    controlFilterMenu = false;
   })
 
   const tipos = Array(18).fill(false);
@@ -100,9 +114,11 @@ const renderFilter = async() => {
       return element[0];
     })
 
+    if(finall.length === 0) {alert("Ningun pokemon tiene todos los tipos seleccionados"); return}
     //lista con todos los pokemon que pasan el filtro
     console.log(finall)
-
+    renderList(finall)
+    $filetContainer.style.display = "none";
     
   })
 }
