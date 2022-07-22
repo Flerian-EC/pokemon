@@ -1,0 +1,6 @@
+.home-pokemon-list__container {
+  max-width: 1500px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}

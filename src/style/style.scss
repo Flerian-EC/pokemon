@@ -1,3 +1,7 @@
+
+pokemon-card {
+  margin: 0 auto;
+}
 //Este es el header
 .home-header {
   width: 100%;
@@ -128,6 +132,8 @@
 .home-pokemon-filter {
   font-family: $titulos;
   display: none;
+  max-width: 500px;
+  margin: 0 auto;
   h2 {
     font-weight: bold;
     text-align: center;
